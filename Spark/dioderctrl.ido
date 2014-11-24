@@ -1,0 +1,40 @@
+/* A Spark function to parse the commands */
+int dioderControl(String command);
+
+/* Globals -------------------------------------------------------------------*/
+int redOut   = A7;
+int greenOut  = A6;
+int blueOut    = A5;
+
+
+
+/* This function is called once at start up ----------------------------------*/
+void setup()
+{
+  //Register Spark function
+  Spark.function("dioder", dioderControl);
+
+  pinMode(redOut, OUTPUT);
+  pinMode(greenOut, OUTPUT);
+  pinMode(blueOut, OUTPUT);
+  
+  analogWrite(redOut,255);
+  analogWrite(greenOut,0);
+  analogWrite(blueOut,0);
+
+}
+
+void loop() {
+
+}
+
+int dioderControl(String command) {
+    // Example string RED(000)GREEN(128)BLUE(255)
+    int redValue = command.substring(4,7).toInt();
+    int greenValue = command.substring(14,17).toInt();
+    int blueValue = command.substring(23,26).toInt();
+    analogWrite(redOut, redValue);
+    analogWrite(greenOut, greenValue);
+    analogWrite(blueOut, blueValue);
+    return redValue;
+}
