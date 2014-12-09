@@ -1,23 +1,28 @@
 /* A Spark function to parse the commands */
-int dioderControl(String command);
+int dioderColor(String command);
+int dioderBlink(String command);
 
 /* Globals -------------------------------------------------------------------*/
 int redOut   = A7;
 int greenOut  = A6;
 int blueOut    = A5;
 
+int redValue = 0;
+int greenValue = 0;
+int blueValue = 0;
 
 
 /* This function is called once at start up ----------------------------------*/
 void setup()
 {
   //Register Spark function
-  Spark.function("dioder", dioderControl);
+  Spark.function("dioder_color", dioderColor);
+  Spark.function("dioder_blink", dioderBlink);
 
   pinMode(redOut, OUTPUT);
   pinMode(greenOut, OUTPUT);
   pinMode(blueOut, OUTPUT);
-  
+
   analogWrite(redOut,255);
   analogWrite(greenOut,0);
   analogWrite(blueOut,0);
@@ -28,13 +33,42 @@ void loop() {
 
 }
 
-int dioderControl(String command) {
+int dioderColor(String command) {
     // Example string RED(000)GREEN(128)BLUE(255)
-    int redValue = command.substring(4,7).toInt();
-    int greenValue = command.substring(14,17).toInt();
-    int blueValue = command.substring(23,26).toInt();
+    redValue = command.substring(4,7).toInt();
+    greenValue = command.substring(14,17).toInt();
+    blueValue = command.substring(23,26).toInt();
     analogWrite(redOut, redValue);
     analogWrite(greenOut, greenValue);
     analogWrite(blueOut, blueValue);
     return redValue;
+}
+
+int dioderBlink(String command) {
+  // Example string RED(255)GREEN(000)BLUE(000)RED(255)GREEN(255)BLUE(255)
+  String firstColor = command.substring(0,26);
+  String secondColor = command.substring(27);
+
+  int firstRed = firstColor.substring(4,7).toInt();
+  int firstGreen = firstColor.substring(14,17).toInt();
+  int firstBlue = firstColor.substring(23,26).toInt();
+
+  int secondRed = secondColor.substring(4,7).toInt();
+  int secondGreen = secondColor.substring(14,17).toInt();
+  int secondBlue = secondColor.substring(23,26).toInt();
+
+  for (int i = 0; i<3; i++) {
+    analogWrite(redOut, firstRed);
+    analogWrite(greenOut, firstGreen);
+    analogWrite(blueOut, firstBlue);
+    delay(500);
+    analogWrite(redOut, secondRed);
+    analogWrite(greenOut, secondGreen);
+    analogWrite(blueOut, secondBlue);
+    delay(500);
+  }
+  analogWrite(redOut, redValue);
+  analogWrite(greenOut, greenValue);
+  analogWrite(blueOut, blueValue);
+  return 0;
 }
