@@ -1,0 +1,152 @@
+Color sent: 
+Color sent: 
+Color sent: <Request 'http://127.0.0.1:5000/send_color' [POST]>
+Color sent: POST
+Color sent: 
+Color sent: None
+Color sent: 
+Color sent: ImmutableMultiDict([('ata', u'args=RED(000)GREEN(000)BLUE(000)')])
+Color sent: ImmutableMultiDict([('arg-s', u'RED(000)GREEN(000)BLUE(000)')])
+Color sent: ImmutableMultiDict([('args', u'RED(000)GREEN(000)BLUE(000)')])
+Color sent: None
+Color sent: None
+Color sent: None
+Color sent: RED(000)GREEN(000)BLUE(000)
+Color to send: RED(000)GREEN(000)BLUE(000)
+Color to send: RED(000)GREEN(255)BLUE(000)
+Color to send: RED(000)GREEN(255)BLUE(000)
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 0
+}
+Color to send: RED(255)GREEN(000)BLUE(000)
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 0
+}
+Color to send: RED(255)GREEN(000)BLUE(000)
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 0
+}
+Color to send: RED(255)GREEN(000)BLUE(000)
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 0
+}
+Color to send: RED(255)GREEN(000)BLUE(000)
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 0
+}
+Color to send: RED(000)GREEN(000)BLUE(000)
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 0
+}
+Color to send: RED(255)GREEN(000)BLUE(000)
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 0
+}
+Color to send: RED(255)GREEN(000)BLUE(000)
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 0
+}
+Color to send: RED(255)GREEN(000)BLUE(000)
+dataToSend: args=RED(255)GREEN(000)BLUE(000)
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 0
+}
+Color to send: RED(255)GREEN(000)BLUE(000)
+dataToSend: args=RED(255)GREEN(000)BLUE(000)
+Response: {
+  "args": {}, 
+  "data": "args=RED(255)GREEN(000)BLUE(000)", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Authorization": "Bearer 0a114cbcc6a50c549da43fa4e53924152ee126c4", 
+    "Connect-Time": "2", 
+    "Connection": "close", 
+    "Content-Length": "32", 
+    "Host": "httpbin.org", 
+    "Total-Route-Time": "0", 
+    "User-Agent": "python-requests/2.4.3 CPython/2.7.6 Darwin/14.0.0", 
+    "Via": "1.1 vegur", 
+    "X-Request-Id": "41ba12f5-2f73-44c3-ad02-cdbe203d06a8"
+  }, 
+  "json": null, 
+  "origin": "213.61.139.82", 
+  "url": "http://httpbin.org/post"
+}
+Color to send: RED(255)GREEN(000)BLUE(000)
+dataToSend: args=RED(255)GREEN(000)BLUE(000)
+Response: ok
+Color to send: RED(255)GREEN(255)BLUE(255)
+dataToSend: args=RED(255)GREEN(255)BLUE(255)
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 0
+}
+Color to send: RED(255)GREEN(255)BLUE(255)
+dataToSend: args=RED(255)GREEN(255)BLUE(255)
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 0
+}
+Color to send: RED(255)GREEN(255)BLUE(255)
+dataToSend: {'command': u'RED(255)GREEN(255)BLUE(255)'}
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 255
+}
+Color to send: RED(255)GREEN(000)BLUE(000)
+dataToSend: {'command': u'RED(255)GREEN(000)BLUE(000)'}
+Response: {
+  "id": "55ff70065075555332471887",
+  "name": "dioder",
+  "last_app": null,
+  "connected": true,
+  "return_value": 255
+}
